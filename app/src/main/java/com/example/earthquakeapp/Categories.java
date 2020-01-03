@@ -1,39 +1,63 @@
 package com.example.earthquakeapp;
 
-public class Categories {
+/**
+ * An {@link Categories} object contains information related to a single earthquake.
+ */
+public class Categories{
 
+    /** Magnitude of the earthquake */
+    private double mMagnitude;
 
-    private  double mMagnitude ;
+    /** Location of the earthquake */
+    private String mLocation;
 
-    private String mCity;
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
 
-    private  long mDate;
     /** Website URL of the earthquake */
     private String mUrl;
 
-    public double getmMagnitude() {
+    /**
+     * Constructs a new {@link Categories} object.
+     *
+     * @param magnitude is the magnitude (size) of the earthquake
+     * @param location is the location where the earthquake happened
+     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
+     *                           earthquake happened
+     * @param url is the website URL to find more details about the earthquake
+     */
+    public Categories(double magnitude, String location, long timeInMilliseconds, String url) {
+        mMagnitude = magnitude;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
+    }
+
+    /**
+     * Returns the magnitude of the earthquake.
+     */
+    public double getMagnitude() {
         return mMagnitude;
     }
 
-    public String getmCity() {
-        return mCity;
+    /**
+     * Returns the location of the earthquake.
+     */
+    public String getLocation() {
+        return mLocation;
     }
 
-    public long getmDate() {
-        return mDate;
+    /**
+     * Returns the time of the earthquake.
+     */
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
-    public String getmUrl() {
+    /**
+     * Returns the website URL to find more information about the earthquake.
+     */
+    public String getUrl() {
         return mUrl;
-    }
-
-    public Categories(double mMagnitude, String mCity, long mDate, String mUrl) {
-        this.mMagnitude = mMagnitude;
-        this.mCity = mCity;
-        this.mDate = mDate;
-        this.mUrl =mUrl;
-
-
-
     }
 }
