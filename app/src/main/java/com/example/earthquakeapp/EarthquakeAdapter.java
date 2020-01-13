@@ -84,6 +84,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Categories> {
         String primaryLocation;
         String locationOffset;
 
+
         // Check whether the originalLocation string contains the " of " text
         if (originalLocation.contains(LOCATION_SEPARATOR)) {
             // Split the string into different parts (as an array of Strings)

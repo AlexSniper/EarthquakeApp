@@ -51,6 +51,7 @@ public class Categories{
      * Returns the time of the earthquake.
      */
     public long getTimeInMilliseconds() {
+
         return mTimeInMilliseconds;
     }
 
